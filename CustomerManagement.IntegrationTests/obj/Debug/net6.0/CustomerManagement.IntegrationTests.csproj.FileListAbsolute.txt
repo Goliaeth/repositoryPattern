@@ -1,0 +1,6 @@
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\CustomerManagement.IntegrationTests\bin\Debug\net6.0\CoverletSourceRootsMapping
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\CustomerManagement.IntegrationTests\obj\Debug\net6.0\CustomerManagement.IntegrationTests.csproj.AssemblyReference.cache
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\CustomerManagement.IntegrationTests\obj\Debug\net6.0\CustomerManagement.IntegrationTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\CustomerManagement.IntegrationTests\obj\Debug\net6.0\CustomerManagement.IntegrationTests.AssemblyInfoInputs.cache
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\CustomerManagement.IntegrationTests\obj\Debug\net6.0\CustomerManagement.IntegrationTests.AssemblyInfo.cs
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\CustomerManagement.IntegrationTests\obj\Debug\net6.0\CustomerManagement.IntegrationTests.csproj.CoreCompileInputs.cache
