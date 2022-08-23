@@ -3,3 +3,10 @@ C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\src\CustomerManagement\obj\
 C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\src\CustomerManagement\obj\Debug\net6.0\CustomerManagement.AssemblyInfoInputs.cache
 C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\src\CustomerManagement\obj\Debug\net6.0\CustomerManagement.AssemblyInfo.cs
 C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\src\CustomerManagement\obj\Debug\net6.0\CustomerManagement.csproj.CoreCompileInputs.cache
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\src\CustomerManagement\bin\Debug\net6.0\CustomerManagement.deps.json
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\src\CustomerManagement\bin\Debug\net6.0\CustomerManagement.dll
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\src\CustomerManagement\bin\Debug\net6.0\CustomerManagement.pdb
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\src\CustomerManagement\obj\Debug\net6.0\CustomerManagement.dll
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\src\CustomerManagement\obj\Debug\net6.0\refint\CustomerManagement.dll
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\src\CustomerManagement\obj\Debug\net6.0\CustomerManagement.pdb
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\src\CustomerManagement\obj\Debug\net6.0\ref\CustomerManagement.dll

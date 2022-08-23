@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CustomerManagement.Interfaces
+﻿namespace CustomerManagement.Interfaces
 {
     public interface IRepository<TEntity>
     {
-        void Create(TEntity customer);
+        TEntity Create(TEntity entity);
         TEntity Read(string entityCode);
-        void Update(TEntity customer);
+        TEntity Update(TEntity entity);
         void Delete(string entityCode);
     }
 }

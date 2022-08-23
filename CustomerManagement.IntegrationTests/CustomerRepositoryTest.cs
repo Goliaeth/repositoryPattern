@@ -20,14 +20,14 @@ namespace CustomerManagement.IntegrationTests
             var repository = new CustomerRepository();
             var customer = new Customer
             {
-                //Id = 109,
                 FirstName = "Petr",
                 LastName = "Petrov",
                 PhoneNumber = "99744556456",
                 Email = "44566@gmail.com",
                 TotalPurchasesAmount = 15
             };
-            repository.Create(customer);
+            var createdCustomer = repository.Create(customer);
+            Assert.NotNull(createdCustomer);
         }
 
         [Fact]
@@ -35,6 +35,7 @@ namespace CustomerManagement.IntegrationTests
         {
             var repository = new CustomerRepository();
             var readedCustomer = repository.Read("4");
+            Assert.NotNull(readedCustomer);
         }
 
         [Fact]
@@ -42,6 +43,7 @@ namespace CustomerManagement.IntegrationTests
         {
             var repository = new CustomerRepository();
             var readedCustomer = repository.Read("2");
+            Assert.Null(readedCustomer);
         }
 
         [Fact]
@@ -50,14 +52,14 @@ namespace CustomerManagement.IntegrationTests
             var repository = new CustomerRepository();
             var customer = new Customer
             {
+                Id = 4,
                 FirstName = "Petr",
                 LastName = "Petrov",
                 PhoneNumber = "98888888888",
                 Email = "44566@gmail.com",
                 TotalPurchasesAmount = 15
             };
-            repository.Update(customer);
-            var updatedCustomer = repository.Read("4");
+            var updatedCustomer = repository.Update(customer);
             Assert.Equal(customer.PhoneNumber, updatedCustomer.PhoneNumber);
         }
 
