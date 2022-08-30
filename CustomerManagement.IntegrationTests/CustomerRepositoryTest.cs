@@ -1,5 +1,6 @@
 using CustomerManagement.BusinessEntities;
 using CustomerManagement.Repositories;
+using Xunit;
 
 namespace CustomerManagement.IntegrationTests
 {
@@ -20,14 +21,30 @@ namespace CustomerManagement.IntegrationTests
             var repository = new CustomerRepository();
             var customer = new Customer
             {
-                FirstName = "Petr",
-                LastName = "Petrov",
+                FirstName = "Vasiliy",
+                LastName = "Ustugov",
                 PhoneNumber = "99744556456",
                 Email = "44566@gmail.com",
                 TotalPurchasesAmount = 15
             };
             var createdCustomer = repository.Create(customer);
             Assert.NotNull(createdCustomer);
+        }
+
+        [Fact]
+        public void ShouldNotBeAbleToCreateCustomer()
+        {
+            var repository = new CustomerRepository();
+            var customer = new Customer
+            {
+                FirstName = "Petr",
+                LastName = "Petrov",
+                PhoneNumber = "99744556456",
+                Email = "4456il.com",
+                TotalPurchasesAmount = 15
+            };
+            var createdCustomer = repository.Create(customer);
+            Assert.Null(createdCustomer);
         }
 
         [Fact]
