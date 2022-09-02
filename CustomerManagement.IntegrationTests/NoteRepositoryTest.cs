@@ -1,5 +1,6 @@
 ﻿using CustomerManagement.BusinessEntities;
 using CustomerManagement.Repositories;
+using Xunit;
 
 namespace CustomerManagement.IntegrationTests
 {

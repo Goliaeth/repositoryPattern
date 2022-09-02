@@ -1,0 +1,11 @@
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\src\CustomerManagement\obj\Debug\net472\CustomerManagement.csproj.AssemblyReference.cache
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\src\CustomerManagement\obj\Debug\net472\CustomerManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\src\CustomerManagement\obj\Debug\net472\CustomerManagement.AssemblyInfoInputs.cache
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\src\CustomerManagement\obj\Debug\net472\CustomerManagement.AssemblyInfo.cs
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\src\CustomerManagement\obj\Debug\net472\CustomerManagement.csproj.CoreCompileInputs.cache
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\src\CustomerManagement\bin\Debug\net472\CustomerManagement.dll
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\src\CustomerManagement\bin\Debug\net472\CustomerManagement.pdb
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\src\CustomerManagement\bin\Debug\net472\System.Data.SqlClient.dll
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\src\CustomerManagement\obj\Debug\net472\CustomerManagement.csproj.CopyComplete
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\src\CustomerManagement\obj\Debug\net472\CustomerManagement.dll
+C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\src\CustomerManagement\obj\Debug\net472\CustomerManagement.pdb

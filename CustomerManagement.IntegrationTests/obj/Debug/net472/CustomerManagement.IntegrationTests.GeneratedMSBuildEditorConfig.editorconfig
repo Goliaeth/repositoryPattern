@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = CustomerManagement.IntegrationTests
+build_property.ProjectDir = C:\Users\Nick\Desktop\ANKO\dotNET\CustomerManagement\CustomerManagement.IntegrationTests\
