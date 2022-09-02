@@ -13,5 +13,10 @@ namespace CustomerManagement.WebForms
         {
 
         }
+
+        protected void Btn1_Click(object sender, EventArgs e)
+        {
+            labelElement.Text = "Hello from Web Forms";
+        }
     }
 }
