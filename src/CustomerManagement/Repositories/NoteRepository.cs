@@ -1,6 +1,7 @@
 ﻿using CustomerManagement.BusinessEntities;
 using CustomerManagement.Interfaces;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -27,7 +28,7 @@ namespace CustomerManagement.Repositories
                 command.Parameters.Add(noteTextParam);
                 try
                 {
-                    newNoteId = (int)command.ExecuteScalar();
+                    newNoteId = (int)(int?)command.ExecuteScalar();
                 }
                 catch (Exception ex)
                 {
@@ -105,6 +106,128 @@ namespace CustomerManagement.Repositories
                 command.Parameters.Add(noteIdParam);
                 command.ExecuteNonQuery();
             }
+        }
+
+        public List<Note> GetAll()
+        {
+            var notes = new List<Note>();
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                var command = new SqlCommand("SELECT * FROM [s1].[Notes]", connection);
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        notes.Add(new Note
+                        {
+                            Id = (int)reader["Id"],
+                            CustomerId = (int)reader["CustomerId"],
+                            NoteText = reader["NoteText"].ToString()
+                        });
+                    }
+                    return null;
+                }
+
+            }
+
+        }
+
+        public List<Note> Read(int offset, int count)
+        {
+            var notes = new List<Note>();
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                var command = new SqlCommand("SELECT * FROM [s1].[Notes] ORDER BY [Id] OFFSET @Offset ROWS FETCH NEXT @Count ROWS ONLY", connection);
+                var offsetParam = new SqlParameter("@Offset", SqlDbType.Int)
+                {
+                    Value = offset,
+                };
+                var countParam = new SqlParameter("@Count", SqlDbType.Int)
+                {
+                    Value = count,
+                };
+                command.Parameters.Add(offsetParam);
+                command.Parameters.Add(countParam);
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        notes.Add(new Note
+                        {
+                            Id = (int)reader["Id"],
+                            CustomerId = (int)reader["CustomerId"],
+                            NoteText = reader["NoteText"].ToString(),
+                        });
+                    }
+
+                }
+
+            }
+            return notes;
+        }
+
+        public List<Note> Read(int offset, int count, string customerId)
+        {
+            var notes = new List<Note>();
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                var command = new SqlCommand("SELECT * FROM [s1].[Notes] WHERE CustomerID = @CustomerId ORDER BY [Id] OFFSET @Offset ROWS FETCH NEXT @Count ROWS ONLY", connection);
+                var customerIdParam = new SqlParameter("@CustomerId", SqlDbType.Int)
+                {
+                    Value = customerId,
+                };
+                var offsetParam = new SqlParameter("@Offset", SqlDbType.Int)
+                {
+                    Value = offset,
+                };
+                var countParam = new SqlParameter("@Count", SqlDbType.Int)
+                {
+                    Value = count,
+                };
+                command.Parameters.Add(customerIdParam);
+                command.Parameters.Add(offsetParam);
+                command.Parameters.Add(countParam);
+                
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        notes.Add(new Note
+                        {
+                            Id = (int)reader["Id"],
+                            //CustomerId = (int)reader["CustomerId"],
+                            NoteText = reader["NoteText"].ToString(),
+                        });
+                    }
+
+                }
+
+            }
+            return notes;
+        }
+
+        public int Count()
+        {
+            int count;
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                var command = new SqlCommand("SELECT COUNT(*) FROM [s1].[Notes]", connection);
+                try
+                {
+                    count = (int)command.ExecuteScalar();
+                }
+                catch (Exception ex)
+                {
+                    count = 0;
+                    Console.WriteLine(ex);
+                }
+
+            }
+            return count;
         }
 
     }
