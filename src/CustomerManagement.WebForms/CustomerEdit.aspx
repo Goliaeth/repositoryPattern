@@ -13,14 +13,18 @@
         <div class="form-group">
             <asp:Label Text="Last Name" runat="server" />
             <asp:TextBox ID="customerLastName" CssClass="form-control center-block" runat="server" />
+            <asp:RequiredFieldValidator runat="server" ControlToValidate ="customerLastName" ErrorMessage="Last Name required"/>
+            <asp:RegularExpressionValidator runat="server" ControlToValidate ="customerLastName" ValidationExpression=".{1,50}" ErrorMessage="Last Name too long"/>
         </div>
         <div class="form-group">
             <asp:Label Text="Phone number" runat="server" />
             <asp:TextBox ID="customerPhoneNumber" CssClass="form-control center-block" runat="server" />
+            <asp:RegularExpressionValidator runat="server" ControlToValidate ="customerPhoneNumber" ValidationExpression="\+\d{5,15}" ErrorMessage="Invalid phone number format"/>
         </div>
         <div class="form-group">
             <asp:Label Text="Email" runat="server" />
             <asp:TextBox ID="customerEmail" CssClass="form-control center-block" runat="server" />
+            <asp:RegularExpressionValidator runat="server" ControlToValidate ="customerEmail" ValidationExpression="[[:alnum:]]+@[[:alnum:]]+\.[[:alnum:]]+" ErrorMessage="Invalid email format"/>
         </div>
         <div class="form-group">
             <asp:Label Text="Total purchases amount" runat="server" />
