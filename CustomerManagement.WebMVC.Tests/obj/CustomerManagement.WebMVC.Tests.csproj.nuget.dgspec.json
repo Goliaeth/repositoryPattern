@@ -1,0 +1,160 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Nick\\Desktop\\ANKO\\dotNET\\CustomerManagement\\CustomerManagement.WebMVC.Tests\\CustomerManagement.WebMVC.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Nick\\Desktop\\ANKO\\dotNET\\CustomerManagement\\CustomerManagement.WebMVC.Tests\\CustomerManagement.WebMVC.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Nick\\Desktop\\ANKO\\dotNET\\CustomerManagement\\CustomerManagement.WebMVC.Tests\\CustomerManagement.WebMVC.Tests.csproj",
+        "projectName": "CustomerManagement.WebMVC.Tests",
+        "projectPath": "C:\\Users\\Nick\\Desktop\\ANKO\\dotNET\\CustomerManagement\\CustomerManagement.WebMVC.Tests\\CustomerManagement.WebMVC.Tests.csproj",
+        "packagesPath": "C:\\Users\\Nick\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nick\\Desktop\\ANKO\\dotNET\\CustomerManagement\\CustomerManagement.WebMVC.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Nick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {
+              "C:\\Users\\Nick\\Desktop\\ANKO\\dotNET\\CustomerManagement\\src\\CustomerManagement.WebMVC\\CustomerManagement.WebMVC.csproj": {
+                "projectPath": "C:\\Users\\Nick\\Desktop\\ANKO\\dotNET\\CustomerManagement\\src\\CustomerManagement.WebMVC\\CustomerManagement.WebMVC.csproj"
+              },
+              "C:\\Users\\Nick\\Desktop\\ANKO\\dotNET\\CustomerManagement\\src\\CustomerManagement\\CustomerManagement.csproj": {
+                "projectPath": "C:\\Users\\Nick\\Desktop\\ANKO\\dotNET\\CustomerManagement\\src\\CustomerManagement\\CustomerManagement.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.1.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.2, )"
+            },
+            "PagedList": {
+              "target": "Package",
+              "version": "[1.17.0, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Nick\\Desktop\\ANKO\\dotNET\\CustomerManagement\\src\\CustomerManagement.WebMVC\\CustomerManagement.WebMVC.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Nick\\Desktop\\ANKO\\dotNET\\CustomerManagement\\src\\CustomerManagement.WebMVC\\CustomerManagement.WebMVC.csproj",
+        "projectName": "CustomerManagement.WebMVC",
+        "projectPath": "C:\\Users\\Nick\\Desktop\\ANKO\\dotNET\\CustomerManagement\\src\\CustomerManagement.WebMVC\\CustomerManagement.WebMVC.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\Nick\\Desktop\\ANKO\\dotNET\\CustomerManagement\\src\\CustomerManagement\\CustomerManagement.csproj": {
+                "projectPath": "C:\\Users\\Nick\\Desktop\\ANKO\\dotNET\\CustomerManagement\\src\\CustomerManagement\\CustomerManagement.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\Nick\\Desktop\\ANKO\\dotNET\\CustomerManagement\\src\\CustomerManagement\\CustomerManagement.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Nick\\Desktop\\ANKO\\dotNET\\CustomerManagement\\src\\CustomerManagement\\CustomerManagement.csproj",
+        "projectName": "CustomerManagement",
+        "projectPath": "C:\\Users\\Nick\\Desktop\\ANKO\\dotNET\\CustomerManagement\\src\\CustomerManagement\\CustomerManagement.csproj",
+        "packagesPath": "C:\\Users\\Nick\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nick\\Desktop\\ANKO\\dotNET\\CustomerManagement\\src\\CustomerManagement\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Nick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

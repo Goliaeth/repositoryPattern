@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace CustomerManagement.Repositories
 {
-    public class NoteRepository : BaseRepository, IRepository<Note>
+    public class NoteRepository : BaseRepository, IDepRepository<Note>
     {
         public Note Create(Note note)
         {
@@ -126,10 +126,11 @@ namespace CustomerManagement.Repositories
                             NoteText = reader["NoteText"].ToString()
                         });
                     }
-                    return null;
+                    
                 }
 
             }
+            return notes;
 
         }
 
@@ -209,6 +210,34 @@ namespace CustomerManagement.Repositories
             return notes;
         }
 
+        public List<Note> GetAllById(string customerId)
+        {
+            var notes = new List<Note>();
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                var command = new SqlCommand("SELECT * FROM [s1].[Notes] WHERE CustomerID = @CustomerId", connection);
+                var customerIdParam = new SqlParameter("@CustomerId", SqlDbType.Int)
+                {
+                    Value = customerId,
+                };
+                command.Parameters.Add(customerIdParam);
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        notes.Add(new Note
+                        {
+                            Id = (int)reader["Id"],
+                            NoteText = reader["NoteText"].ToString(),
+                        });
+                    }
+                }
+
+            }
+            return notes;
+        }
+
         public int Count()
         {
             int count;
@@ -229,6 +258,5 @@ namespace CustomerManagement.Repositories
             }
             return count;
         }
-
     }
 }

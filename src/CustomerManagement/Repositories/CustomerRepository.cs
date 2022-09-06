@@ -146,7 +146,7 @@ namespace CustomerManagement.Repositories
             using (var connection = GetConnection())
             {
                 connection.Open();
-                var command = new SqlCommand("DELETE FROM [s1].[Customers] WHERE id = @customerId", connection);
+                var command = new SqlCommand("DELETE FROM [s1].[Notes] WHERE CustomerID = @customerId; DELETE FROM [s1].[Addresses] WHERE CustomerID = @customerId; DELETE FROM [s1].[Customers] WHERE id = @customerId", connection);
                 var customerIdParam = new SqlParameter("@customerId", SqlDbType.Int)
                 {
                     Value = customerId

@@ -1,0 +1,41 @@
+﻿@model PagedList.IPagedList<CustomerManagement.BusinessEntities.Note>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+<h4>Notes</h4>
+
+<p>
+    @Html.ActionLink("Create Note", "Create", new { customerId = ViewBag.customerId }, new { @class = "btn btn-success" })
+</p>
+<table class="table text-center">
+    <tr>
+        <th class="text-center">
+            Id
+        </th>
+        <th class="text-center">
+            Note text
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoteText)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { noteId = item.Id, customerId = ViewBag.customerId }) |
+                @Html.ActionLink("Delete", "Delete", new { noteId = item.Id, customerId = ViewBag.customerId })
+            </td>
+        </tr>
+    }
+
+</table>
+Notes page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Details", "Customers", new { id = ViewBag.customerId, notesPage = page, addressesPage = ViewBag.addressesPage }))
+

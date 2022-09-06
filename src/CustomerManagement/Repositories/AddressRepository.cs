@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace CustomerManagement.Repositories
 {
-    public class AddressRepository : BaseRepository, IRepository<Address>
+    public class AddressRepository : BaseRepository, IDepRepository<Address>
     {
         public Address Create(Address address)
         {
@@ -289,6 +289,41 @@ namespace CustomerManagement.Repositories
                         {
                             Id = (int)reader["Id"],
                             //CustomerId = (int)reader["CustomerId"],
+                            AddressLine = reader["AddressLine"].ToString(),
+                            AddressLine2 = reader["AddressLine2"].ToString(),
+                            AddressType = reader["AddressType"].ToString(),
+                            City = reader["City"].ToString(),
+                            Country = reader["Country"].ToString(),
+                            PostalCode = reader["PostalCode"].ToString(),
+                            State = reader["State"].ToString()
+                        });
+                    }
+
+                }
+
+            }
+            return addresses;
+        }
+
+        public List<Address> GetAllById(string customerId)
+        {
+            var addresses = new List<Address>();
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                var command = new SqlCommand("SELECT * FROM [s1].[Addresses] WHERE CustomerID = @CustomerId", connection);
+                var customerIdParam = new SqlParameter("@CustomerId", SqlDbType.Int)
+                {
+                    Value = customerId,
+                };
+                command.Parameters.Add(customerIdParam);
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        addresses.Add(new Address
+                        {
+                            Id = (int)reader["Id"],
                             AddressLine = reader["AddressLine"].ToString(),
                             AddressLine2 = reader["AddressLine2"].ToString(),
                             AddressType = reader["AddressType"].ToString(),
